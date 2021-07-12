@@ -8,6 +8,7 @@
 
 import Foundation
 import Photos
+import UIKit
 
 class ImageManager {
     static let shared = ImageManager()
