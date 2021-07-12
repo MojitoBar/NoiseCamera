@@ -14,10 +14,8 @@
 		2672370C1E79BF6E003D2EAA /* RosyEffect.metal in Sources */ = {isa = PBXBuildFile; fileRef = 2672370B1E79BF6E003D2EAA /* RosyEffect.metal */; };
 		2672370E1E79BFC0003D2EAA /* DepthToGrayscale.metal in Sources */ = {isa = PBXBuildFile; fileRef = 2672370D1E79BFBF003D2EAA /* DepthToGrayscale.metal */; };
 		267ED8501ED7974A00898078 /* minMaxFromBuffer.m in Sources */ = {isa = PBXBuildFile; fileRef = 267ED84E1ED7965B00898078 /* minMaxFromBuffer.m */; };
-		B702C4A32699C75C0058D51D /* opencv2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B702C4A22699C75C0058D51D /* opencv2.framework */; };
 		B797130A268C79AD00000483 /* ImageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7971309268C79AD00000483 /* ImageManager.swift */; };
 		B7AAD66626790343006A9A2D /* AlbumController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7AAD66526790343006A9A2D /* AlbumController.swift */; };
-		B7D430092677A6C900E1310B /* OpenCVWrapper.mm in Sources */ = {isa = PBXBuildFile; fileRef = B7D430082677A6C900E1310B /* OpenCVWrapper.mm */; };
 		E422DFC01CEF894F0047D7A4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E422DFBE1CEF894F0047D7A4 /* Main.storyboard */; };
 		E422DFC21CEF894F0047D7A4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E422DFC11CEF894F0047D7A4 /* Assets.xcassets */; };
 		E422DFC51CEF894F0047D7A4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E422DFC31CEF894F0047D7A4 /* LaunchScreen.storyboard */; };
@@ -49,15 +47,10 @@
 		2633CF1C1E7C65D500FC80E1 /* DepthToGrayscaleConverter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DepthToGrayscaleConverter.swift; sourceTree = "<group>"; };
 		2672370B1E79BF6E003D2EAA /* RosyEffect.metal */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.metal; path = RosyEffect.metal; sourceTree = "<group>"; };
 		2672370D1E79BFBF003D2EAA /* DepthToGrayscale.metal */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.metal; path = DepthToGrayscale.metal; sourceTree = "<group>"; };
-		267ED84D1ED7965A00898078 /* AVCamFilter-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "AVCamFilter-Bridging-Header.h"; sourceTree = "<group>"; };
 		267ED84E1ED7965B00898078 /* minMaxFromBuffer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = minMaxFromBuffer.m; sourceTree = "<group>"; };
 		267ED84F1ED7965B00898078 /* minMaxFromBuffer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = minMaxFromBuffer.h; sourceTree = "<group>"; };
-		B702C4A22699C75C0058D51D /* opencv2.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = opencv2.framework; sourceTree = "<group>"; };
 		B7971309268C79AD00000483 /* ImageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageManager.swift; sourceTree = "<group>"; };
 		B7AAD66526790343006A9A2D /* AlbumController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumController.swift; sourceTree = "<group>"; };
-		B7D430072677A6C900E1310B /* OpenCVWrapper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OpenCVWrapper.h; sourceTree = "<group>"; };
-		B7D430082677A6C900E1310B /* OpenCVWrapper.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = OpenCVWrapper.mm; sourceTree = "<group>"; };
-		B7D4300A2677A6F900E1310B /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 		E414FC6C1D5921FD0007C979 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		E422DFB71CEF894F0047D7A4 /* AVCamFilter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AVCamFilter.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E422DFBF1CEF894F0047D7A4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -79,7 +72,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B702C4A32699C75C0058D51D /* opencv2.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -97,24 +89,14 @@
 			path = Shaders;
 			sourceTree = "<group>";
 		};
-		B7D430042677A6A300E1310B /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				B702C4A22699C75C0058D51D /* opencv2.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
 		E422DFAE1CEF894F0047D7A4 = {
 			isa = PBXGroup;
 			children = (
-				B7D4300A2677A6F900E1310B /* PrefixHeader.pch */,
 				E414FC6C1D5921FD0007C979 /* README.md */,
 				E422DFB91CEF894F0047D7A4 /* AVCamFilter */,
 				E422DFB81CEF894F0047D7A4 /* Products */,
 				E7C549B0E7C54A5000000001 /* Configuration */,
 				E7D94C30E7D94E6000000001 /* LICENSE */,
-				B7D430042677A6A300E1310B /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -144,9 +126,6 @@
 				E422DFC11CEF894F0047D7A4 /* Assets.xcassets */,
 				E422DFC31CEF894F0047D7A4 /* LaunchScreen.storyboard */,
 				E422DFC61CEF894F0047D7A4 /* Info.plist */,
-				267ED84D1ED7965A00898078 /* AVCamFilter-Bridging-Header.h */,
-				B7D430072677A6C900E1310B /* OpenCVWrapper.h */,
-				B7D430082677A6C900E1310B /* OpenCVWrapper.mm */,
 				B7AAD66526790343006A9A2D /* AlbumController.swift */,
 				B7971309268C79AD00000483 /* ImageManager.swift */,
 			);
@@ -250,7 +229,6 @@
 				261FA1F71E945EEA00BE8D47 /* VideoMixer.swift in Sources */,
 				261FA1F91E94641700BE8D47 /* Mixer.metal in Sources */,
 				2608B7DB1E70937A00A7310F /* RosyMetalRenderer.swift in Sources */,
-				B7D430092677A6C900E1310B /* OpenCVWrapper.mm in Sources */,
 				E4E160DD1D0099F100C83A5A /* RosyCIRenderer.swift in Sources */,
 				E4A8A1421CF6188A006823AB /* PassThrough.metal in Sources */,
 				E422DFCF1CEF8AF50047D7A4 /* AppDelegate.swift in Sources */,
@@ -328,7 +306,7 @@
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_PREFIX_HEADER = "$(SRCROOT)/AVCamFilter/PrefixHeader.pch";
+				GCC_PREFIX_HEADER = "";
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
@@ -389,7 +367,7 @@
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_PREFIX_HEADER = "$(SRCROOT)/AVCamFilter/PrefixHeader.pch";
+				GCC_PREFIX_HEADER = "";
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
 				GCC_WARN_UNDECLARED_SELECTOR = YES;
@@ -422,7 +400,7 @@
 					"$(PROJECT_DIR)/Frameworks",
 					"$(PROJECT_DIR)",
 				);
-				GCC_PREFIX_HEADER = "$(SRCROOT)/PrefixHeader.pch";
+				GCC_PREFIX_HEADER = "";
 				INFOPLIST_FILE = AVCamFilter/Info.plist;
 				INSTALL_PATH = "";
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
@@ -434,7 +412,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SDKROOT = iphoneos;
-				SWIFT_OBJC_BRIDGING_HEADER = "AVCamFilter/AVCamFilter-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 			};
@@ -456,7 +434,7 @@
 					"$(PROJECT_DIR)/Frameworks",
 					"$(PROJECT_DIR)",
 				);
-				GCC_PREFIX_HEADER = "$(SRCROOT)/PrefixHeader.pch";
+				GCC_PREFIX_HEADER = "";
 				INFOPLIST_FILE = AVCamFilter/Info.plist;
 				INSTALL_PATH = "";
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
@@ -467,7 +445,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SDKROOT = iphoneos;
-				SWIFT_OBJC_BRIDGING_HEADER = "AVCamFilter/AVCamFilter-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
