@@ -220,7 +220,7 @@ class CameraViewController: UIViewController, AVCapturePhotoCaptureDelegate, AVC
     }
     
     func photoLibraryDidChange(_ changeInstance: PHChange) {
-        guard let change = changeInstance.changeDetails(for: fetchResult) else {
+        guard let change = changeInstance.changeDetails(for: fetchResult!) else {
             return
         }
         
