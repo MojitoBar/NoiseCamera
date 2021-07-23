@@ -10,7 +10,7 @@ import Foundation
 import UIKit
 import Photos
 
-class AlbumController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate, PHPhotoLibraryChangeObserver{
+class AlbumController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate, PHPhotoLibraryChangeObserver, UIAdaptivePresentationControllerDelegate{
    
     var picList: [String] = []
     var fetchResult: PHFetchResult<PHAsset>!
@@ -18,19 +18,24 @@ class AlbumController: UIViewController, UIImagePickerControllerDelegate, UINavi
     var imageUrl = PHAsset()
     var imageCount = 0
     var imageLocation: Int?
+    var check: Bool = true
     @IBOutlet weak var AlbumImage: UIImageView!
     
     @IBOutlet weak var imageState: UILabel!
     @IBAction func BackButton(_ sender: Any) {
-        self.navigationController?.popViewController(animated: true)
+        if check {
+            self.navigationController?.popViewController(animated: true)
+        }
     }
     
     @IBOutlet weak var galeryView: UIButton!
     
     @IBAction func galeryButton(_ sender: Any) {
         picker.delegate = self
-        
         picker.sourceType = .photoLibrary
+        picker.modalPresentationStyle = .fullScreen
+        
+        check = false
         present(picker, animated: true, completion: nil)
     }
     @IBAction func onClickDeleteButton(_ sender: Any) {
@@ -42,8 +47,9 @@ class AlbumController: UIViewController, UIImagePickerControllerDelegate, UINavi
     override func viewDidLoad(){
         super.viewDidLoad()
         picker.delegate = self
-        
         picker.sourceType = .photoLibrary
+        check = false
+        picker.modalPresentationStyle = .fullScreen
         present(picker, animated: true, completion: nil)
         
         PHPhotoLibrary.shared().register(self)
@@ -65,6 +71,12 @@ class AlbumController: UIViewController, UIImagePickerControllerDelegate, UINavi
         imageLocation = picList.firstIndex(of: imageUrl.localIdentifier)
         
         checkCount()
+        check = true
+    }
+    
+    func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
+        check = true
+        dismiss(animated: true, completion: nil)
     }
     
     func photoLibraryDidChange(_ changeInstance: PHChange) {
@@ -133,6 +145,9 @@ class AlbumController: UIViewController, UIImagePickerControllerDelegate, UINavi
         else{
             imageState.text = String(imageLocation! + 1) + " / " + String(imageCount)
         }
-
+    }
+    
+    func presentationControllerDidDismiss(_ presentationController: UIPresentationController) {
+        print("asasdf")
     }
 }
